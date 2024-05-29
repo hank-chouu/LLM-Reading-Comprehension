@@ -2,7 +2,7 @@
 set -e
 pwd=$PWD
 echo ":: Setup started"
-echo ":: Creating project folder"
+echo ":: Creating project folder (../zh-tw-reading-comprehension-test-for-llms)"
 rm -rf ../zh-tw-reading-comprehension-test-for-llms
 mkdir ../zh-tw-reading-comprehension-test-for-llms
 echo ":: Copying scripts"
@@ -10,20 +10,20 @@ cp train.sh inference.sh data_prep.py generate_submission.py ../zh-tw-reading-co
 cd ../zh-tw-reading-comprehension-test-for-llms
 # clone llama-factory and install dependencies
 echo ":: Creating virtual enviromnent (.llama-factory)"
-virtualenv .llama-factory > /dev/null
+python3 -m venv .llama-factory
 source .llama-factory/bin/activate
-echo ":: Installing LLaMA Factory"
+pip install --upgrade pip
+pip install setuptools wheel
+echo ":: Installing LLaMA-Factory and dependencies"
 git clone https://github.com/hiyouga/LLaMA-Factory.git
-echo ":: Installing dependencies"
 pip install --upgrade --force-reinstall --no-cache-dir torch==2.1.0 triton \
   --index-url https://download.pytorch.org/whl/cu121
 pip install packaging
 pip install "unsloth[cu121-ampere] @ git+https://github.com/unslothai/unsloth.git"
-cd LLaMA-Factory
-pip install -e .[bitsandbytes]
-pip install openpyxl # for process train data
+pip install -e LLaMA-Factory[bitsandbytes]
+pip install openpyxl pandas tqdm # for process train data
 # download and unzip the training file into data dir
-echo ":: Downloading data..."
+echo ":: Downloading data"
 kaggle competitions download -c zh-tw-reading-comprehension-test-for-llms
 unzip zh-tw-reading-comprehension-test-for-llms.zip -d data/
 python data_prep.py
