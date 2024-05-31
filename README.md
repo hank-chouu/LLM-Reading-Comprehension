@@ -207,7 +207,7 @@ Despite employing a more concrete prompt and a higher LORA rank, a decrease in a
 
 ### LLaMA3-8B/sft3
 
-This experiment replicated the settings of sft2 but without using the unsloth part intended for speed-up.
+This experiment replicated the settings of sft2 but without using the unsloth part intended for acceleration.
 
 <p align="center">
   <img src="https://github.com/Deep-Learning-NYCU/traditional-chinese-reading-comprehension-test-for-llms-A112092-new/blob/main/img/llama3-8b-sft3.png?raw=true" alt="LLaMA3-8B/sft3"/>
