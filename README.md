@@ -36,13 +36,13 @@ Ver. 1
 
 ```python
 instruction = "".join([
-	"接下來的訊息中，將會提供文章、題目，以及選項。請在仔細的閱讀並理解文章後，針對題目所述，從四個選項中選出最適當的答案。直接回答選項編號。\n\n",
-	f"文章：{str(row['文章'])}\n\n",
-	f"問題：{str(row['問題'])}\n\n",
-	f"選項1：{str(row['選項1'])}\n"
-	f"選項2：{str(row['選項2'])}\n"
-	f"選項3：{str(row['選項3'])}\n"
-	f"選項4：{str(row['選項4'])}\n"
+    "接下來的訊息中，將會提供文章、題目，以及選項。請在仔細的閱讀並理解文章後，針對題目所述，從四個選項中選出最適當的答案。直接回答選項編號。\n\n",
+    f"文章：{str(row['文章'])}\n\n",
+    f"問題：{str(row['問題'])}\n\n",
+    f"選項1：{str(row['選項1'])}\n"
+    f"選項2：{str(row['選項2'])}\n"
+    f"選項3：{str(row['選項3'])}\n"
+    f"選項4：{str(row['選項4'])}\n"
 ])
 output = f"{str(row['正確答案'])}"
 prompt = {"instruction": instruction, "input": "", "output": output}
@@ -52,15 +52,15 @@ Ver. 2
 
 ```python
 instruction = "".join(
-	[
-		"接下來的訊息中，將會提供「文章」、「題目」，以及四個「選項」。請在仔細地閱讀並理解文章後，針對題目所述，從四個選項中選出最適當的答案。直接回答選項編號。\n\n",
-		f"文章：{str(row['文章'])}\n\n",
-		f"問題：{str(row['問題'])}\n\n",
-		f"選項1：{str(row['選項1'])}\n"
-		f"選項2：{str(row['選項2'])}\n"
-		f"選項3：{str(row['選項3'])}\n"
-		f"選項4：{str(row['選項4'])}\n",
-	]
+    [
+        "接下來的訊息中，將會提供「文章」、「題目」，以及四個「選項」。請在仔細地閱讀並理解文章後，針對題目所述，從四個選項中選出最適當的答案。直接回答選項編號。\n\n",
+        f"文章：{str(row['文章'])}\n\n",
+        f"問題：{str(row['問題'])}\n\n",
+        f"選項1：{str(row['選項1'])}\n"
+        f"選項2：{str(row['選項2'])}\n"
+        f"選項3：{str(row['選項3'])}\n"
+        f"選項4：{str(row['選項4'])}\n",
+    ]
 )
 output = f"{str(row['正確答案'])}"
 prompt = {"instruction": instruction, "input": "", "output": output}
@@ -125,26 +125,26 @@ Ver. 1
 
 ```python
 prompt = "".join([
-	f"文章：{str(row['文章'])}\n\n",
-	f"問題：{str(row['問題'])}\n\n",
-	f"選項1：{str(row['選項1'])}\n"
-	f"選項2：{str(row['選項2'])}\n"
-	f"選項3：{str(row['選項3'])}\n"
-	f"選項4：{str(row['選項4'])}\n"
+    f"文章：{str(row['文章'])}\n\n",
+    f"問題：{str(row['問題'])}\n\n",
+    f"選項1：{str(row['選項1'])}\n"
+    f"選項2：{str(row['選項2'])}\n"
+    f"選項3：{str(row['選項3'])}\n"
+    f"選項4：{str(row['選項4'])}\n"
 ])
 
 data={
-	"model": "",
-	"messages": [
-		{
-			"role": "system",
-			"content": "接下來的訊息中，將會提供文章、題目，以及選項。請在仔細的閱讀並理解文章後，針對題目所述，從四個選項中選出最適當的答案。直接回答選項編號。"
-		},
-		{
-			"role": "user",
-			"content": prompt
-		}
-	]
+    "model": "",
+    "messages": [
+        {
+            "role": "system",
+            "content": "接下來的訊息中，將會提供文章、題目，以及選項。請在仔細的閱讀並理解文章後，針對題目所述，從四個選項中選出最適當的答案。直接回答選項編號。"
+        },
+        {
+            "role": "user",
+            "content": prompt
+        }
+    ]
 }
 ```
 
@@ -152,28 +152,28 @@ Ver. 2
 
 ```python
 prompt = "".join(
-	[
-		f"文章：{str(row['文章'])}\n\n",
-		f"問題：{str(row['問題'])}\n\n",
-		f"選項1：{str(row['選項1'])}\n"
-		f"選項2：{str(row['選項2'])}\n"
-		f"選項3：{str(row['選項3'])}\n"
-		f"選項4：{str(row['選項4'])}\n",
-	]
+    [
+        f"文章：{str(row['文章'])}\n\n",
+        f"問題：{str(row['問題'])}\n\n",
+        f"選項1：{str(row['選項1'])}\n"
+        f"選項2：{str(row['選項2'])}\n"
+        f"選項3：{str(row['選項3'])}\n"
+        f"選項4：{str(row['選項4'])}\n",
+    ]
 )
 
 data = {
-	"model": "",
-	"messages": [
-		{
-			"role": "system",
-			"content": "接下來的訊息中，將會提供「文章」、「題目」，以及四個「選項」。請在仔細地閱讀並理解文章後，針對題目所述，從四個選項中選出最適當的答案。直接回答選項編號。",
-		},
-		{
-			"role": "user",
-			"content": prompt
-		},
-	],
+    "model": "",
+    "messages": [
+        {
+            "role": "system",
+            "content": "接下來的訊息中，將會提供「文章」、「題目」，以及四個「選項」。請在仔細地閱讀並理解文章後，針對題目所述，從四個選項中選出最適當的答案。直接回答選項編號。",
+        },
+        {
+            "role": "user",
+            "content": prompt
+        },
+    ],
 }
 ```
 
