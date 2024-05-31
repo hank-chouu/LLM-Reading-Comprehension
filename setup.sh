@@ -6,7 +6,7 @@ echo ":: Creating project folder (../zh-tw-reading-comprehension-test-for-llms)"
 rm -rf ../zh-tw-reading-comprehension-test-for-llms
 mkdir ../zh-tw-reading-comprehension-test-for-llms
 echo ":: Copying scripts"
-cp train.sh inference.sh data_prep.py generate_submission.py ../zh-tw-reading-comprehension-test-for-llms
+cp scripts/* ../zh-tw-reading-comprehension-test-for-llms
 cd ../zh-tw-reading-comprehension-test-for-llms
 # clone llama-factory and install dependencies
 echo ":: Creating virtual enviromnent (.llama-factory)"

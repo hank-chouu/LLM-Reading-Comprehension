@@ -19,7 +19,7 @@ To reproduce the project setup, simply run `setup.sh` under this repo.
 The script will do the following sequentially:
 
 1. Create the project directory `zh-tw-reading-comprehension-test-for-llms` under the parent directory.
-2. Copy the reqired scripts into the project directory.
+2. Copy the files in `scripts` into the project directory.
 3. Create and activate a virtual environment (.llama-factory).
 4. Clone LLaMA-Factory and install the dependencies.
 5. Download and unzip the questions and the reading materials.
