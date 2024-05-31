@@ -106,7 +106,7 @@ We basically specify that
 - Use the `llama-3-8b-Instruct-bnb-4bit` model from unsloth (The unsloth acceleration tool is not used in th initial settings though).
 - Template: llama3
 - Use `lora_target: all` to specify all the available modules for better convergence.
-- Loraplus LR ratio = 16
+- LORA+ learning rate ratio = 16
 - Learning rate = 5e-5
 - Batch = 3
 - Gradient Accumulation Steps = 8
@@ -189,6 +189,8 @@ We adopted the initial settings and used prompt version 1, completing fine-tunin
 
 - Public score: 0.88333
 - Private score: 0.89571
+
+With the initial settings, Llama 3 already gave us a competitive result.
 
 ### LLaMA3-8B/sft2
 
