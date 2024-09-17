@@ -184,7 +184,7 @@ data = {
 We adopted the initial settings and used prompt version 1, completing fine-tuning in approximately 6 hours.
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-NYCU/traditional-chinese-reading-comprehension-test-for-llms-A112092-new/blob/main/img/llama3-8b-sft1.png?raw=true" alt="LLaMA3-8B/sft1"/>
+  <img src="https://raw.githubusercontent.com/hengtseChou/LLM-Reading-Comprehension/main/img/llama3-8b-sft1.png" alt="LLaMA3-8B/sft1"/>
 </p>
 
 - Public score: 0.88333
@@ -197,7 +197,7 @@ With the initial settings, Llama 3 already gave us a competitive result.
 In this experiment, we used prompt version 2, adopted the unsloth acceleration, and set the LORA rank to 16. The fine-tuning process lasted for approximately 3.5 hours.
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-NYCU/traditional-chinese-reading-comprehension-test-for-llms-A112092-new/blob/main/img/llama3-8b-sft2.png?raw=true" alt="LLaMA3-8B/sft2"/>
+  <img src="https://raw.githubusercontent.com/hengtseChou/LLM-Reading-Comprehension/main/img/llama3-8b-sft2.png" alt="LLaMA3-8B/sft2"/>
 </p>
 
 - Public score: 0.86333
@@ -210,7 +210,7 @@ Despite employing a more concrete prompt and a higher LORA rank, a decrease in a
 This experiment replicated the settings of sft2 but without using the unsloth part intended for acceleration.
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-NYCU/traditional-chinese-reading-comprehension-test-for-llms-A112092-new/blob/main/img/llama3-8b-sft3.png?raw=true" alt="LLaMA3-8B/sft3"/>
+  <img src="https://raw.githubusercontent.com/hengtseChou/LLM-Reading-Comprehension/main/img/llama3-8b-sft3.png" alt="LLaMA3-8B/sft3"/>
 </p>
 
 - Public score: 0.89333
@@ -223,7 +223,7 @@ The score in this experiment was higher than those observed in sft1 and sft2, su
 In this experiment, we tried a different model, but it did not work out. The training and inference each took 6 hours, and the submission created was garbled.
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-NYCU/traditional-chinese-reading-comprehension-test-for-llms-A112092-new/blob/main/img/llama3-8b-sft1.png?raw=true" alt="Breeze-7B/sft1"/>
+  <img src="https://raw.githubusercontent.com/hengtseChou/LLM-Reading-Comprehension/main/img/llama3-8b-sft1.png" alt="Breeze-7B/sft1"/>
 </p>
 
 It is possible that an incorrect template or settings were selected, but this matter was not investigated further.
@@ -235,7 +235,7 @@ In this experiment, we examined whether providing the model with additional trad
 The configuration was identical to sft2, except we added the `alpaca_gpt4_zh` dataset as additional training material. The fine-tuning process took about 12 hours.
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-NYCU/traditional-chinese-reading-comprehension-test-for-llms-A112092-new/blob/main/img/llama3-8b-sft4.png?raw=true" alt="LLaMA3-8B/sft4"/>
+  <img src="https://raw.githubusercontent.com/hengtseChou/LLM-Reading-Comprehension/main/img/llama3-8b-sft4.png" alt="LLaMA3-8B/sft4"/>
 </p>
 
 - Public score: 0.90666
@@ -248,7 +248,7 @@ This was the best result we obtained.
 In this experiment, we aimed to investigate whether excluding unsloth could improve accuracy. The configuration was identical to sft4, but we did not use unsloth. The fine-tuning process took about 25 hours.
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-NYCU/traditional-chinese-reading-comprehension-test-for-llms-A112092-new/blob/main/img/llama3-8b-sft5.png?raw=true" alt="LLaMA3-8B/sft5"/>
+  <img src="https://raw.githubusercontent.com/hengtseChou/LLM-Reading-Comprehension/main/img/llama3-8b-sft5.png" alt="LLaMA3-8B/sft5"/>
 </p>
 
 - Public score: 0.86666
